@@ -1,0 +1,130 @@
+/*
+This is a good layout for a mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+/*********************************************************************
+ LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES
+*********************************************************************/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+/*********************************************************************
+  YOUR MOBILE/BASE STYLES GO HERE
+*********************************************************************/
+
+/* Remember design elements taught in class */
+
+* {
+    box-sizing: border-box;
+}
+
+figcaption { font-style: italic;
+ }
+
+html, body {
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+    font-size: 16px;
+    font-family: serif;
+    background-color: beige;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+}
+
+
+.container {
+    margin:30px;
+    margin-top: 20px;
+}
+
+.intro {text-align: center;}
+
+
+h2 {
+    color: gray;
+    font-family: 'Playfair Display', serif;
+}
+
+h4 {
+    font-family: 'Playfair Display', serif;
+}
+
+
+p {margin-bottom: 10px}
+
+.lead_image {
+    display: block;
+    margin: auto;
+    width: 100%;
+    min-width: 300px;
+}
+
+img{
+    max-width: 65%;
+    display: block;
+    margin: auto;
+}
+
+strong{
+    color: gray;
+}
+
+.iconhed{
+    font-weight: bold;
+}
+
+footer > p{
+    margin-bottom: -20px;
+    color: gray;
+    font-size: 15px;
+}
+
+
+/*********************************************************************
+  YOUR TABLET/DESKTOP STYLES GO HERE
+*********************************************************************/
+@media(min-width: 681px) {
+    /* Any adjustments for tablets and larger go here.
+    Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+
+/* Don't forget to modify for tablet/desktop */
+
+
+.container {
+    margin: 200px;
+    margin-top: 20px;
+}
+
+
+.flex{
+    display: flex;
+}
+
+
+.flex > div{
+    flex-basis: 20%;
+}
+
+div.flex{
+        justify-content: space-between;
+
+}
+
+#firsthed{
+    padding-bottom: 10px;
+}
+
+
+}
+
+/*********************************************************************
+  YOUR DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+@media(min-width: 729px) {
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 729px or larger -- so desktop */
+}
